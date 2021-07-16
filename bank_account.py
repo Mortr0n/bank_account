@@ -7,13 +7,11 @@ class BankAccount:
         
     def deposit(self, amount):
         self.balance += amount
-        print(f"Depositing ${amount} to UserName's account. \nNew balance is ${self.balance}")
         return self
         
     def withraw(self, amount):
         if(self.balance > amount):
             self.balance -= amount
-            print(f"Withdrawing ${amount} from UserName's account. \nNew balance is ${self.balance}")
         else:
             self.balance -= self.over_draft
             print(f"Insufficient funds for withdrawal.  \nOverdraft fee of ${self.over_draft} will be charged. \nNew balance is ${self.balance}")
